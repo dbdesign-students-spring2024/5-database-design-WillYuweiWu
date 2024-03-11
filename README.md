@@ -117,11 +117,11 @@ FK: `student_id`, `assignment_id`
 
 - PK: Primary Keys. 
 - FK: Foreign Keys. 
-- The `Enrollments` table associates students with their enrolled sections.
-- The `Grades` table keeps track of the grades students received for assignments, and it doesn't have a PK. 
-- A separate `Assignments` table is needed to accommodate cases where the same assignment might be given to different sections with different due dates.
-- The `Readings` table links specific readings to assignments since one assignment may have multiple readings.
-- The `Sections` table records different sections of a course. 
+- The **Enrollments** table associates students with their enrolled sections.
+- The **Grades** table keeps track of the grades students received for assignments, and it doesn't have a PK. 
+- A separate **Assignments** table is needed to accommodate cases where the same assignment might be given to different sections with different due dates.
+- The **Readings** table links specific readings to assignments since one assignment may have multiple readings.
+- The **Sections** table records different sections of a course. 
 
 This structure above ensures that each fact is stored only once and that all relationships are properly represented without multi-valued dependencies. The tables are linked through FKs that refer to the PKs in their respective tables. This design allows the database to be efficient, flexible, and free from update anomalies, and therefore is compliant with 4NF. 
 
